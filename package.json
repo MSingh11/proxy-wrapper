@@ -1,0 +1,15 @@
+{
+  "name": "ad-filter-proxy",
+  "version": "1.0.0",
+  "description": "Express proxy that strips ads using jsdom and http-proxy",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "jsdom": "^24.0.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  }
+}
