@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: ad-filter-proxy
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: TARGET_URL
+        sync: false

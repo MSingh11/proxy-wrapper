@@ -82,6 +82,10 @@ function stripAds(html) {
 
 const app = express();
 
+app.get('/healthz', (_req, res) => {
+  res.status(200).json({ ok: true });
+});
+
 // Block obvious ad network requests early (applies to all routes).
 app.use((req, res, next) => {
   const targetUrl = new URL(req.originalUrl, TARGET);
